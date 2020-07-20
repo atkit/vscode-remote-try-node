@@ -7,8 +7,21 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/server.js"
+            "name": "Start",                        
+            "program": "${workspaceFolder}/server.js",                                    
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "nodemon",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
+            "runtimeArgs": ["--inspect", "--delay", "1"],
+            "program": "${workspaceFolder}/server.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            "sourceMaps": true
         }
     ]
 }
